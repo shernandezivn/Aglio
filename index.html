@@ -1,60 +1,355 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Aglio Restaurante Italiano</title>
+	<!-- CSS BOOTSTRAP-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title>AGLIO RESTAURANTE ITALIANO</title>
 </head>
 <body>
-<div class="header">
-	<img class="banner" src="147293168_123345513000687_8247502821292108233_o.jpg">
-	<img class="logo" src="aglio logo.png">
-</div>
-	<img class="img-menu" style="margin-top: 37%;" src="WhatsApp Image 2021-02-21 at 22.13.46.jpeg">
-	<img class="img-menu" src="WhatsApp Image 2021-02-21 at 22.13.46 (1).jpeg">
 
-</body>
-</html>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><img class="logo" src="aglio logo.png"></a>
+<!-- MENU RESONSIVO BOOTSTRAP-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #0e0e0e47!important;">
+  <a class="navbar-brand" href="#" id="but1">
+  	<img border="0" hspace="0" alt="Logo Aglio" src="logo.png" align="middle" style="max-width: 70px;border-radius: 55px;">
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item ">
+        <a class="nav-link" href="#" id="but2">Comida</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#" id="but3">Bebidas</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
+  
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
 
+
+<content>
+<!--CONTENIDO INICIO-->
+<div class="container p-3" id="cont_1">
+	<div align="center">
+		<div class="header-negro" style="text-transform: uppercase;" >Aglio Santa Lucía </br> <span style="font-size:1rem;">restaurante italiano</span>
+		</div>
+	</div>
+
+
+	<div style="width: 100%; float: left;position: relative;background: #fff">
+		
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="ceviche.jpeg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Ceviche</h5>
+					<p class="card-text">Ceviche de Camaron pequeño Q.30.00</br> Cevicche camaron grande Q.60.00</p>
+					<a href="#" class="btn btn-primary">Q.60.00</a>
+				</div>
+		</div>
+
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="ceviche.jpeg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Ceviche</h5>
+					<p class="card-text">Ceviche de Camaron pequeño Q.30.00</br> Cevicche camaron grande Q.60.00</p>
+					<a href="#" class="btn btn-primary">Q.60.00</a>
+				</div>
+		</div>
+
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="ceviche.jpeg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Ceviche</h5>
+					<p class="card-text">Ceviche de Camaron pequeño Q.30.00</br> Cevicche camaron grande Q.60.00</p>
+					<a href="#" class="btn btn-primary">Q.60.00</a>
+				</div>
+		</div>
+
+	</div>
+</div>
+
+<!--CONTENIDO CALCULADORA FACTORES-->
+<div class="container p-3" id="cont_2" style="display: none;">
+	<form class="needs-validation was-validated" novalidate="">
+			<div class="form-group row">
+				<label for="user" class="col-sm-2 col-lg-3 col-form-label">Monto: </label>
+				<div class="col-sm-10 col-lg-9" >
+					<input type="text"  class="form-control" id="user" placeholder="0.00" required>
+					<div class="valid-tooltip">
+        				Looks good!
+      				</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="inputPassword" class="col-sm-2 col-lg-3 col-form-label">Moneda: </label>
+				<div class="col-sm-10 col-lg-9 ">
+					<div class="form-group">
+						<select class="custom-select" required>
+							<option value="">Selecione una opción</option>
+							<option value="1">Quetzales</option>
+							<option value="2">Dolares</option>
+						</select>
+						<div class="invalid-feedback">Example invalid custom select feedback</div>
+					</div>
+					<div class="valid-tooltip">
+        				Looks good!
+      				</div>
+				</div>
+				<label class="col-sm-2 col-lg-3 col-form-label" for="start">Fecha Emision Factura:</label>
+				<div class="col-sm-10 col-lg-9 col-form-label" >
+					<input type="date" id="start" name="trip-start" value="2020-02-12" min="2018-01-01" max="2021-12-31" class="custom-select">
+				</div>
+
+				<label class="col-sm-2 col-lg-3 col-form-label" for="start">Fecha Pago Factura:</label>
+				<div class="col-sm-10 col-lg-9 col-form-label" >
+					<input type="date" id="start" name="trip-start" value="2020-02-12" min="2018-01-01" max="2021-12-31" class="custom-select">
+				</div>
+
+				<label for="user" class="col-sm-2 col-lg-3 col-form-label">Anticipo: </label>
+				<div class="col-sm-10 col-lg-9" >
+					<input type="text"  class="form-control" id="user" placeholder="0.00" required>
+					<div class="valid-tooltip">
+        				Looks good!
+      				</div>
+
+      				<button data-toggle="modal" data-target="#exampleModal2" type="button" class="btn btn-primary mt-4" style="background-color: rgb(0, 48, 130);">Aceptar</button>
+      				<button type="button" onClick="window.location.reload();" class="btn btn-primary mt-4" style="background-color: rgb(0, 48, 130);">Limpiar</button>
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Datos Guardados</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+								</div>
+							<div class="modal-body">
+							¡Bien hecho! se ha guardado correctamente.</div>
+							<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal" onClick="window.location.reload();">Save</button>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</form>
+</div>
+
+<!--CONTENIDO CALCULADORA INVERSIONES-->
+<div class="container p-3" id="cont_3" style="display: none;">
+	<form class="needs-validation was-validated" novalidate="">
+			<div class="form-group row">
+				<label for="user2" class="col-sm-2 col-lg-3 col-form-label">Capital: </label>
+				<div class="col-sm-10 col-lg-9" >
+					<input type="text"  class="form-control" id="user2"  required>
+					<div class="valid-tooltip">
+        				Looks good!
+      				</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="inputPassword" class="col-sm-2 col-lg-3 col-form-label">Dias plazo: </label>
+				<div class="col-sm-10 col-lg-9 ">
+					<div class="form-group">
+						<select class="custom-select" required>
+							<option value="" placeholder="Seleccione opción"></option>
+							<option value="1">180</option>
+							<option value="2">210</option>
+							<option value="3">240</option>
+							<option value="4">270</option>
+							<option value="5">300</option>
+							<option value="6">330</option>
+						</select>
+						<div class="invalid-feedback">Seleccione opción</div>
+					</div>
+					<div class="valid-tooltip">
+        				Looks good!
+      				</div>
+				</div>
+
+				<label class="col-sm-2 col-lg-3 col-form-label" for="start">Fecha Inversion:</label>
+				<div class="col-sm-10 col-lg-9 col-form-label" >
+					<input type="date" id="start" name="trip-start" value="2020-02-12" min="2018-01-01" max="2021-12-31" class="custom-select">
+				</div>
+
+				<label for="user" class="col-sm-2 col-lg-3 col-form-label">Tasa Interes</label>
+				<div class="col-sm-10 col-lg-9" >
+					<input type="text"  class="form-control" id="user" placeholder="0.5%" required>
+					<div class="valid-tooltip">
+        				Looks good!
+      				</div>
+
+				</div>
+
+				<label for="inputPassword2" class="col-sm-2 col-lg-3 col-form-label pt-4">Tipo Interes </label>
+				<div class="col-sm-10 col-lg-9 pt-sm-2 pt-lg-4">
+					<div class="form-group">
+						<select class="custom-select" required>
+							<option value="" placeholder="Seleccione opción"></option>
+							<option value="1">Mensual</option>
+							<option value="2">Al interes</option>
+						</select>
+						<div class="invalid-feedback">Seleccione opción</div>
+					</div>
+					<div class="valid-tooltip">
+						Looks good!
+						</div>
+
+      				<button data-toggle="modal" data-target="#exampleModal3" type="button" class="btn btn-primary mt-4" style="background-color: rgb(0, 48, 130);">Aceptar</button>
+      				<button type="button" onClick="window.location.reload();" class="btn btn-primary mt-4" style="background-color: rgb(0, 48, 130);">Limpiar</button>
+
+      				<!-- Modal -->
+					<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Datos Guardados</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+								</div>
+							<div class="modal-body">
+							¡Bien hecho! se ha guardado correctamente.</div>
+							<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal" onClick="window.location.reload();">Save</button>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+</div>
+</content>
+
+
+
+
+</div>
+
+
+<footer style="background-color: #000;color: #fff;padding:12px;">
+	<div class="half" style="font-family:'Century Gothic';font-size: 1em; color: #ffffff; text-align: center; float: left;">
+		<h4>Ubicación:</h4>
+	Km, 89.5 Carretera al Pacifico Santa Lucía Cotzumalguapa</div>
+
+	<div class="half" style="font-family:'Century Gothic';font-size: 1em; color: #ffffff; text-align: center; float: left;">
+		<h4>Contactanos:</h4>
+		<div style="width: 110px; display: block;margin: 0 auto;">
+			<a class="what" href="https://wa.me/50255214605/?text=Quisiera ordenar, me pueden dar mas información?"></a>
+			<a class="fb" href="https://www.facebook.com/Aglio-Santa-Luc%C3%ADa-100695781932327"></a>
+		</div>
+	</div>
+	<span style="text-align: center;width: 100%;display: block;">© Copyright 2021</span>
+</footer>
+
+
+<script>
+$(document).ready(function(){
+  $("#but1").click(function(){
+    $("#cont_1").show();
+    $("#cont_2").hide();
+    $("#cont_3").hide();
+  });
+  $("#but2").click(function(){
+    $("#cont_1").hide();
+    $("#cont_2").show();
+    $("#cont_3").hide();
+  });
+   $("#but3").click(function(){
+    $("#cont_1").hide();
+    $("#cont_2").hide();
+    $("#cont_3").show();
+  });
+
+    function refreshPage() {
+        // What do I put here?
+    } 
+});
+</script>
+
 <style type="text/css">
-	body {margin: 0;}
-	.header {width: 100%;position: fixed;}
-	.logo {position: absolute; top: 5%; left: 5%;width: 100px;border-radius: 50px;}
-	img.banner {width: 100%;}
-	.img-menu{width: 100%;}
+	.navbar-light .navbar-nav .nav-link {
+    float: right;
+    color: #fff;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid;
+    width: 50%;
+
+}
+.navbar-light .navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+}
+div#cont_1 {
+    max-width: 100%!important;
+    padding: 0%!important;
+}
+.header-negro {
+	background-image: url(fondo.jpeg);
+    width: 100%;
+    height: 500px;
+    margin-top: -21%;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding: 259px 0px;
+    font-size: 2rem;
+    text-shadow: 4px 3px 6px #000;
+    font-weight: bold;
+}
+.half {width: 50%;margin-bottom: 15%;margin-bottom: 5%;
+    margin-top: 5%;}
+.what {
+    background-image: url(whatsapp.png);
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-size: 100%;
+    border-radius: 15px;
+    margin-right: 5%;
+    float: left;
+}
+.fb {
+    background-image: url(fb.png);
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-size: 100%;
+    border-radius: 15px;
+    float: left;
+}
+
+.card {
+    width: 30%!important;
+    margin: 15px;
+float: left;}
+
+.card-body {
+    text-align: center;
+}
+
+@media (max-width:800px){
+    .header-negro{margin-top: -50%;}
+    .half {width: 100%;}
+    .card {width: 90%!important;margin: 15px;}
+}
 </style>
+<!-- SCRIPTS BOOTSTRAP-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
