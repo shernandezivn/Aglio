@@ -31,6 +31,9 @@
       <li class="nav-item">
         <a class="nav-link" href="#ancla3" id="but3">Bebidas</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#ancla4" id="but4">Promociones</a>
+      </li>
   
     </ul>
   </div>
@@ -48,6 +51,15 @@
 
 
 	<div id="ancla1" style="width: 100%; float: left;position: relative;background: #fff">
+		
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="combo.png" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Combo de picocitas</h5>
+					<p class="card-text">Camarones enpanizados, pan con ajo y queso mozzarella acompañados de salsa marinara.</p>
+					<a href="#" class="btn btn-primary">Q.95.00</a>
+				</div>
+		</div>
 		
 		<div class="card" style="width: 18rem;">
 			<img class="card-img-top" src="ceviche.jpeg" alt="Card image cap">
@@ -234,6 +246,15 @@
 
 
 	<div id="ancla2" style="width: 100%; float: left;position: relative;background: #fff">
+
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="combo.png" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Combo de picocitas</h5>
+					<p class="card-text">Camarones enpanizados, pan con ajo y queso mozzarella acompañados de salsa marinara.</p>
+					<a href="#" class="btn btn-primary">Q.95.00</a>
+				</div>
+		</div>
 		
 		<div class="card" style="width: 18rem;">
 			<img class="card-img-top" src="ceviche.jpeg" alt="Card image cap">
@@ -423,6 +444,31 @@
 
 	</div>
 </div>
+
+<!--CONTENIDO PROMOCIONES -->
+<div class="container p-3" id="cont_4" style="display: none;">
+	<div align="center">
+		<div class="header-negro" style="text-transform: uppercase;" >Aglio Santa Lucía </br> <span style="font-size:1rem;">Promociones</span>
+						<img src="cruz.png" style="max-width: 60px;display: block;margin: 0 auto;">
+
+		</div>
+	</div>
+
+	<div id="ancla4" style="width: 100%; float: left;position: relative;background: #fff">
+		
+
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="combo.png" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Combo de picocitas</h5>
+					<p class="card-text">Camarones enpanizados, pan con ajo y queso mozzarella acompañados de salsa marinara.</p>
+					<a href="#" class="btn btn-primary">Q.95.00</a>
+				</div>
+		</div>
+
+	</div>
+</div>
+
 </content>
 
 
@@ -431,7 +477,7 @@
 </div>
 
 
-<footer style="background-color: #000;color: #fff;padding:12px;">
+<footer style="background-color: #000;color: #fff;padding:12px;float: left;">
 	<div class="half" style="font-family:'Century Gothic';font-size: 1em; color: #ffffff; text-align: center; float: left;">
 		<h4>Ubicación:</h4>
 	Km, 89.5 Carretera al Pacifico Santa Lucía Cotzumalguapa</div>
@@ -453,16 +499,25 @@ $(document).ready(function(){
     $("#cont_1").show();
     $("#cont_2").hide();
     $("#cont_3").hide();
+    $("#cont_4").hide();
   });
   $("#but2").click(function(){
     $("#cont_1").hide();
     $("#cont_2").show();
     $("#cont_3").hide();
+    $("#cont_4").hide();
   });
    $("#but3").click(function(){
     $("#cont_1").hide();
     $("#cont_2").hide();
     $("#cont_3").show();
+    $("#cont_4").hide();
+  });
+   $("#but4").click(function(){
+    $("#cont_1").hide();
+    $("#cont_2").hide();
+    $("#cont_3").hide();
+    $("#cont_4").show();
   });
 
     function refreshPage() {
@@ -479,7 +534,7 @@ $(document).ready(function(){
     font-size: 20px;
     font-weight: 700;
     border-bottom: 1px solid;
-    width: 25%;
+    width: 37%;
 
 }
 
